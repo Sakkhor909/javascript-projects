@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F2F5;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: rgb(14, 13, 13);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.links {
+    padding: 50px;
+    box-shadow: 2px 3px 4px #00000045;
+    text-transform: capitalize;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.links:hover {
+        box-shadow: 2px 3px 4px #193aca45;
+}

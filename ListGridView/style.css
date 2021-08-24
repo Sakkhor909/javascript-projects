@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0F2F5;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: rgb(19, 18, 18);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(18, 174, 212);
+}
+
+.box {
+    background-color:#aaa;
+    margin: 10px 0px;
+    padding: 50px;
+    border: 2px solid black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+}

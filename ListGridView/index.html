@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Grid View</title>
+    <link rel="stylesheet" href="style.css">
+        <!-- Load Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>List Grid view</h1>
+<!-- Buttons to choose list or grid view -->
+<button class="btn active" id="list" onclick="viewChange(this.id)" ><i class="fa fa-bars"></i> List</button>
+<button class="btn" id="grid" onclick="viewChange(this.id)" ><i class="fa fa-th-large"></i> Grid</button>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+    <script>
+        const container =  document.querySelector(".container");
+        function viewChange(ID) {
+            const gridButton = document.querySelector("#grid");
+            const listButton = document.querySelector("#list");
+            container.classList.toggle("grid", ID == "grid" );
+            if (ID == "grid") {
+                gridButton.classList.add("active");
+                listButton.classList.remove("active");
+            } else {
+                gridButton.classList.remove("active");
+                listButton.classList.add("active");
+            }
+        }
+     
+    </script>
+
+</body>
+</html>
