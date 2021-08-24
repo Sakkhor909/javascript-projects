@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do</title>
+    <!-- Fontawsome -->
+    <script crossorigin='anonymous' src='https://kit.fontawesome.com/9943431847.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <div id="appHeader" class="disable-select">
+        <h1 class="heading">Things to DO</h1>
+        <form onsubmit="appHandeler.save(event)">
+            <input autocomplete="off" id="saveInput" type="text" placeholder="Write a new task..." maxlength="100"
+                required>
+            <button id="saveButton" type="submit"><i class="fas fa-save"></i></button>
+        </form>
+        <div id="appheader3">
+            <div class="switch">
+                <input id="switch-1" type="checkbox" class="switch-input" onchange="app.toggle(this)" />
+                <label for="switch-1" class="switch-label">Switch</label>
+            </div>
+            <div>
+                <p id="taskCountBoard"></p>
+            </div>
+            <button id="deletAll" onclick="app.deleteAll()"><i class="fas fa-trash"></i></button>
+        </div>
+        <details id="searchBox">
+            <summary>Find the task</summary>
+            <form>
+                <input autocomplete="off" type="text" placeholder="search here...." id="searchinput"
+                    onkeyup="app.search()">
+                <select id="itemFilter" onchange="app.filter(this.value)">
+
+                </select>
+            </form>
+        </details>
+    </div>
+
+    <div id="appContainer">
+
+        <ul id="listItems">
+
+        </ul>
+
+    </div>
+    <footer>©-2020 Made by Minhajur Rahman Sakkhor</footer>
+</body>
+
+</html>

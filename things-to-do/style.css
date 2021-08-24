@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  counter-reset: TO-DO;
+  background-color: whitesmoke;
+}
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+#appContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+#appContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+#appContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(131, 164, 168);
+  border: 2px solid slategrey;
+  border-radius: 15px;
+}
+#heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+ul {
+  list-style: none;
+}
+li {
+  padding: 10px;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid rgb(19, 18, 18);
+}
+
+.listFlex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 10px;
+}
+li button {
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+}
+li button:hover {
+  top: -3px;
+}
+
+.date,
+.status {
+  color: white;
+}
+li button:active {
+  outline: none;
+  top: 0;
+}
+li button:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgba(65, 165, 211, 0.816);
+  border-radius: 5px;
+  transform: scale(2);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 10px;
+  position: relative;
+}
+input[type="checkbox"]:hover {
+  top: -3px;
+}
+input[type="checkbox"]:focus {
+  outline: none;
+}
+input[type="checkbox"]:active {
+  top: 0px;
+  outline: none;
+}
+input[type="checkbox"]:checked {
+  background-color: rgb(39, 194, 59);
+  border: 5px solid rgb(47, 144, 209);
+}
+#appContainer {
+  background-color: rgb(15, 129, 182);
+  width: 345px;
+  height: 430px;
+  border-radius: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+#appContainer h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 430px;
+  background-color: rgb(157, 201, 201);
+}
+#appContainer h2 i {
+  background-color: yellow;
+  border-radius: 50%;
+  font-size: 25px;
+}
+#appHeader {
+  background-color: rgba(65, 165, 211, 0.815);
+  border: 5px solid rgba(11, 150, 214, 0.815);
+  border-radius: 3px;
+  width: 340px;
+}
+#appHeader h1 {
+  text-align: center;
+  background-color: rgba(65, 165, 211, 0.815);
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  cursor: default;
+  width: 100%;
+}
+
+form {
+  margin: 10px 0px;
+  text-align: center;
+}
+#saveInput {
+  padding: 7px 0px;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 5px;
+  width: 85%;
+}
+#saveInput:focus + button i {
+  color: green;
+}
+#saveButton {
+  padding: 5px;
+  background-color: white;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 5px;
+  position: relative;
+}
+#saveButton:hover {
+  top: -3px;
+}
+#saveButton i {
+  font-size: 18px;
+  color: dodgerblue;
+}
+#saveButton:hover > i {
+  color: green;
+}
+
+#saveButton:active,
+#saveButton:focus {
+  top: 0px;
+  outline: none;
+}
+details {
+  text-align: center;
+  background-color: rgba(65, 165, 211, 0.815);
+}
+summary:focus,
+summary:active {
+  outline: none;
+}
+#searchinput {
+  padding: 7px 0px;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 5px;
+  width: 60%;
+}
+#appHeader form input:focus {
+  outline: none;
+}
+#itemFilter {
+  padding: 7px;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 5px;
+}
+#itemFilter:focus,
+#itemFilter:active {
+  outline: none;
+}
+.text {
+  font-size: 1.5em;
+}
+.text::before {
+  counter-increment: TO-DO;
+  content: "TO-DO " counter(TO-DO) ": ";
+  color: aliceblue;
+  font-size: 20px;
+}
+#deletAll {
+  padding: 5px;
+  background-color: white;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 5px;
+  position: relative;
+}
+#deletAll i {
+  color: red;
+  font-size: 20px;
+}
+#deletAll:focus,
+#deleteAll:active {
+  outline: none;
+  top: 0px;
+}
+#deletAll:hover {
+  top: -3px;
+}
+.deleteButton i {
+  color: red;
+  font-size: 16px;
+}
+#appheader3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+.edit {
+  clear: both;
+  float: right;
+  margin: 0px 10px 0px 0px;
+  color: dodgerblue;
+  font-size: 16px;
+}
+.saveedit {
+  margin: 10px 10px 0px 0px;
+  color: dodgerblue;
+  font-size: 16px;
+}
+.editInput {
+  padding: 5px 0px;
+  border: 3px solid rgb(229, 238, 237);
+  border-radius: 10px;
+}
+
+/* switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+}
+.switch-input {
+  display: none;
+}
+.switch-label {
+  display: block;
+  width: 48px;
+  height: 24px;
+  text-indent: -150%;
+  clip: rect(0 0 0 0);
+  color: transparent;
+  user-select: none;
+}
+.switch-label::before,
+.switch-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.switch-label::before {
+  width: 100%;
+  height: 100%;
+  background-color: #dedede;
+  border-radius: 9999em;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+.switch-label::after {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+}
+.switch-input:checked + .switch-label::before {
+  background-color: rgb(39, 194, 59);
+}
+.switch-input:checked + .switch-label::after {
+  left: 24px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 600px) {
+  #appContainer {
+    width: 100%;
+    height: 510px;
+  }
+  .text {
+    font-size: 1em;
+  }
+}
