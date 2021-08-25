@@ -23,8 +23,8 @@
     </div>
 
     <script>
-        const container =  document.querySelector(".container");
         function viewChange(ID) {
+            const container =  document.querySelector(".container");
             const gridButton = document.querySelector("#grid");
             const listButton = document.querySelector("#list");
             container.classList.toggle("grid", ID == "grid" );
@@ -36,7 +36,6 @@
                 listButton.classList.add("active");
             }
         }
-     
     </script>
 
 </body>
