@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading Checklist</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <h1>Cascading Checklist</h1>
+    <form action="#">
+      <div class="section-1">
+        <input
+          type="radio"
+          name="catagory"
+          value="Phone"
+          class="catagory"
+          id="Phone"
+        />
+        <label for="Phone">Phone</label>
+        <input
+          type="radio"
+          value="Electronics"
+          class="catagory"
+          id="Electronics"
+          name="catagory"
+        />
+        <label for="Electronics">Electronics</label>
+        <input
+          type="radio"
+          name="catagory"
+          value="Bike"
+          class="catagory"
+          id="Bike"
+        />
+        <label for="Bike">Bike</label>
+      </div>
+      <div id="default-msg">Please Select a catagory</div>
+      <div class="section-2" id="itemList">
+        <input type="search" id="Search-item" autocomplete="off" />
+        <div id="list"></div>
+      </div>
+    </form>
+  </body>
+</html>
