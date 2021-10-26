@@ -23,7 +23,7 @@ a {
 
 .flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
@@ -32,7 +32,7 @@ a {
 }
 
 .links {
-  padding: 50px;
+  padding: 2rem;
   box-shadow: 2px 3px 4px #00000045;
   text-transform: capitalize;
   background-color: white;
