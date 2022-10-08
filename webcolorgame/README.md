@@ -1,6 +1,6 @@
 # webcolorgame
 A HTML 5 game!
-Try it here : https://sakkhor909.github.io/javascript-projects/webcolorgame/
+Try it here : https://sakkhor909.github.io/raw-javascript-projects/webcolorgame/
 <ul>
     <li>You have 6 color plate.     
     <div> <img src='Images/colorPlate.jpg' width='200px' /> </div> </li>
